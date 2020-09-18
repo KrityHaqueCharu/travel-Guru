@@ -1,0 +1,15 @@
+.bg{
+    height:688px;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.title{
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.first{
+    padding-top: 10%;
+}
