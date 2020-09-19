@@ -3,11 +3,16 @@ import bg from './bg.png';
 import sajek from '../../photos/Image/Sajek.png';
 import sreemongol from '../../photos/Image/Sreemongol.png';
 import sundorbon from '../../photos/Image/sundorbon.png';
-
 import './Nav.css';
 import {Col,Row,Card,CardDeck} from 'react-bootstrap';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
-const Nav = () => {
+const CoxBazar = () => {
     return (
         
            <div className="bg" style={{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${bg})`}}>
@@ -15,30 +20,37 @@ const Nav = () => {
             <Row>
             <Col md={3}>
             <div className="title ">
-            <h1>COX'S BAZAR</h1><br></br>
-           <p><h4>Cox's Bazar is the longest sea becah in the world.please visit this city.Thank you</h4></p> 
+            <h1>Travel Guru</h1><br></br>
+           <p><h4>We are a trusted travel agency with. Trust us and visit us.thanks</h4></p> 
             </div>
            </Col>
            <Col md={9}>
         <CardDeck>
-            <Card>
+           
+            <Card className="hov">
                 <Card.Img variant="top" src={sajek} />
-                <Card.Body>
-                <Card.Title>Srimangal</Card.Title>
-                </Card.Body>
-            </Card>
-            <Card>
-                <Card.Img variant="top" src={sundorbon} />
                 <Card.Body>
                 <Card.Title>Sajek</Card.Title>
                 </Card.Body>
+                <Link to={"/sajek"}>See More</Link>
             </Card>
-            <Card>
+            
+            <Card  className="hov">
+                <Card.Img variant="top" src={sundorbon} />
+                <Card.Body>
+                <Card.Title>Sundorbon</Card.Title>
+                </Card.Body>
+                <Link to={"/sundorbon"}>See More</Link>
+            </Card>
+            
+            <Card  className="hov">
                 <Card.Img variant="top" src={sreemongol} />
                 <Card.Body>
                 <Card.Title>Cox's Bazar</Card.Title>
                 </Card.Body>
+                <Link to={"/coxsBazar"}>See More</Link>
             </Card>
+           
         </CardDeck>
         </Col>
         </Row>
@@ -50,4 +62,4 @@ const Nav = () => {
        );
 };
 
-export default Nav;
+export default CoxBazar;

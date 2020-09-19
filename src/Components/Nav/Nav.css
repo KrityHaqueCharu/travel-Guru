@@ -13,3 +13,6 @@
 .first{
     padding-top: 10%;
 }
+.hov:hover{
+    box-shadow: 5px 10px 20px paleturquoise;
+}
